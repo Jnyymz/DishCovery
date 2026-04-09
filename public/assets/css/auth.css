@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap');
+
+body.auth-page {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #1E1E2F;
+    color: #FFFFFF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.auth-brand-title,
+.auth-form-title {
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-shell {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.auth-card {
+    width: min(960px, 100%);
+    min-height: 520px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #23233B;
+    border: 2px solid #6C63FF;
+    box-shadow: 0 0 18px rgba(108, 99, 255, 0.55);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.auth-card-panel {
+    position: relative;
+    padding: 40px;
+}
+
+.auth-card-panel.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(145deg, #3D417A 0%, #2E315B 55%, #2A2A40 100%);
+    clip-path: polygon(0 0, 100% 0, 84% 100%, 0 100%);
+}
+
+.auth-brand-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
+    z-index: 1;
+}
+
+.auth-brand-logo-wrap {
+    width: 250px;
+    max-width: 72%;
+    height: 98px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.auth-brand-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 0;
+    transform: scale(1.55);
+    transform-origin: center;
+    filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.35));
+}
+
+.auth-brand-subtitle {
+    margin-top: 10px;
+    color: #C7C9E6;
+    font-size: 1rem;
+    z-index: 1;
+}
+
+.auth-card-panel.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-form-wrap {
+    width: min(420px, 100%);
+}
+
+.auth-form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.auth-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #A7AACD;
+    margin-bottom: 6px;
+}
+
+.auth-input {
+    background: #1E1E2F;
+    border: 1px solid #4A4A6A;
+    color: #FFFFFF;
+    border-radius: 0;
+    padding: 10px 12px;
+}
+
+.auth-input:focus {
+    color: #FFFFFF;
+    background: #1E1E2F;
+    border-color: #8E7CFF;
+    box-shadow: 0 0 0 0.2rem rgba(142, 124, 255, 0.2);
+}
+
+.auth-input::placeholder {
+    color: #7E82A5;
+}
+
+.auth-btn {
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #6C63FF, #8E7CFF);
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 11px 18px;
+    box-shadow: 0 8px 22px rgba(108, 99, 255, 0.45);
+}
+
+.auth-btn:hover,
+.auth-btn:focus-visible {
+    color: #FFFFFF;
+    opacity: 0.95;
+}
+
+.auth-btn:disabled,
+.auth-btn.disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.auth-btn:disabled:hover,
+.auth-btn:disabled:focus-visible {
+    opacity: 0.55;
+}
+
+.auth-helper {
+    color: #C7C9E6;
+    font-size: 0.95rem;
+}
+
+.auth-helper a {
+    color: #8E7CFF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-helper a:hover,
+.auth-helper a:focus-visible {
+    color: #FFFFFF;
+}
+
+.auth-rule {
+    margin-top: 8px;
+    color: #A7AACD;
+    font-size: 0.82rem;
+}
+
+.auth-check {
+    color: #C7C9E6;
+    font-size: 0.9rem;
+}
+
+.auth-check a {
+    color: #8E7CFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-check a:hover,
+.auth-check a:focus-visible {
+    color: #FFFFFF;
+}
+
+.auth-check .form-check-input {
+    background-color: #1E1E2F;
+    border-color: #6C63FF;
+}
+
+.auth-check .form-check-input:checked {
+    background-color: #6C63FF;
+    border-color: #6C63FF;
+}
+
+.auth-check .form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+}
+
+@media (max-width: 991px) {
+    .auth-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .auth-card-panel.left {
+        min-height: 180px;
+        padding: 28px;
+        clip-path: none;
+    }
+
+    .auth-card-panel.right {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .auth-shell {
+        padding: 14px;
+    }
+
+    .auth-card-panel {
+        padding: 24px 18px;
+    }
+
+    .auth-form-title {
+        font-size: 1.6rem;
+    }
+
+    .auth-brand-logo-wrap {
+        width: 190px;
+        max-width: 75%;
+        height: 82px;
+    }
+}
